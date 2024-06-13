@@ -99,13 +99,16 @@ console.log(departments[userInput]);
 if (userInput in departments) {
   let allTitles;
 // Opdracht 3 - een nieuwe prompt
-  for (let [index, [key, value]] of Object.entries(userInput).entries().) {
-    console.log(key);
-    // allTitles += `${index}: functietitel ${userInput.toString()}${value.} \n`;
-  }
-  secondInputPrompt = prompt(
-      `Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${userInput.length}\n
-  ${allTitles}`);
+  const arr = departments[userInput].jobs
+  arr.forEach((element, index) => {
+
+    console.log(index);
+    allTitles += `${index}: [functietitel ${userInput} ${element.title}] \n`;
+  });
+
+  // secondInputPrompt = prompt(
+  //     `Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${userInput.length}\n
+  // ${allTitles}`);
 } else {
   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
 }
