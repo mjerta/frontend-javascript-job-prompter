@@ -140,6 +140,7 @@ if (userInput in departments) {
   console.log(taskFourA);
   console.log(userInput);
   console.log(`${userInput} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} mederwerkers`);
+  document.getElementById('role-title').textContent = userInput;
 
   const arr = departments[userInput].jobs;
   arr.forEach((element, index) => {
@@ -159,6 +160,12 @@ if (userInput in departments) {
 } else {
   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
+
+// Opdracht 5 - bonus
+
+// Opdracht 5a
+// document.getElementById('role-title').textContent = "Maarten Postma";
+// document.getElementById('department-description').textContent = "Pizza";
 
 
 
