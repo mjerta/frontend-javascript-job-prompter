@@ -71,40 +71,54 @@ const departments = {
   }
 }
 const numberOfEmployees = departments.sales.numberOfEmployees;
-// Opdracht 1a
+
+const taskOneA = "Opdracht 1a";
+console.log(taskOneA);
 console.log(`De afdeling Sales heeft ${numberOfEmployees} medewerkers`);
 
-// Opdracht 1b
+const taskOneB = "Opdracht 1a";
+console.log(taskOneB);
 const description = departments.sales.description;
 console.log(`Marketing is een leuke afdeling om te werken. ${description}`);
 
-// Opdracht 1c
+const taskOneC = "Opdracht 1c";
+console.log(taskOneC);
 const numberOfEmployeesService = departments.customerService.numberOfEmployees;
 console.log(`De afdeling Customer Service heeft ${numberOfEmployeesService} medewerkers`);
 
-// Opdracht 1d
+const taskOneD = "Opdracht 1d";
+console.log(taskOneD);
 const salesManager = departments.sales.jobs[1].title
 console.log(`Sales is een uitdagende afdeling om te werken als ${salesManager}`);
 
 // Opdracht 2 - prompten en beslissen
 
-// Opdracht 2a
+const taskTwoA = "Opdracht 2a";
+console.log(taskTwoA)
 let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
 console.log(userInput);
 
-// Opdracht 2b
+const taksTwoB = "Opdracht 2B";
+console.log(taksTwoB);
 console.log(departments[userInput]);
 
-// Opdracht 2c
+const taskTwoC = "Opdracht 2c";
+console.log(taskTwoC);
 if (userInput in departments) {
+  console.log("This is a valid entry");
   let allTitles = "";
 // Opdracht 3 - een nieuwe prompt
   const arr = departments[userInput].jobs;
   arr.forEach((element, index) => {
-    allTitles += `${index}: [functietitel ${userInput} ${element.title}] \n`;
+    allTitles += `${index}: ${element.title} \n`;
   });
-  userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${userInput.length}\n${allTitles}`);
 
+  const taskThreeA = "Opdracht 3a";
+  console.log(taskThreeA);
+  userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${arr.length - 1}\n${allTitles}`);
+  if (userInput === "1") {
+    console.log(`Je koos ${arr[userInput].title}. Een uitdagende rol! ${arr[userInput].description}`);
+  }
 } else {
   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
