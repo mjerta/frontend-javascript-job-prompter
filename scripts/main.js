@@ -140,7 +140,9 @@ if (userInput in departments) {
   console.log(taskFourA);
   console.log(userInput);
   console.log(`${userInput} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} mederwerkers`);
-  document.getElementById('role-title').textContent = userInput;
+
+  // Opdracht 5b
+  document.getElementById("department-description").textContent = departments[userInput].description;
 
   const arr = departments[userInput].jobs;
   arr.forEach((element, index) => {
@@ -149,16 +151,25 @@ if (userInput in departments) {
   userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${arr.length - 1}\n${allTitles}`);
   const taskFourC = "Opdracht 4c";
   console.log(taskFourC);
+
+  // This will check if an user entry is between the indexes available of the array.
   if (parseInt(userInput) >= 0 || parseInt(userInput) <= arr.length) {
     console.log("This is a valid entry");
     const taskFourB = "Opdracht 4b";
     console.log(taskFourB);
     console.log(`Je koos ${arr[userInput].title}. Een uitdagende rol! ${arr[userInput].description}`);
+
+    // Opdracht 5b
+    document.getElementById('role-title').textContent = arr[userInput].title;
+    document.getElementById("role-description").textContent = arr[userInput].description;
+
   } else {
     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    document.getElementById("error-message").textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
   }
 } else {
   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+  document.getElementById("error-message").textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
 }
 
 // Opdracht 5 - bonus
@@ -167,5 +178,5 @@ if (userInput in departments) {
 // document.getElementById('role-title').textContent = "Maarten Postma";
 // document.getElementById('department-description').textContent = "Pizza";
 
-
+// Opdracht 5 - template literals gebruik ik al, erg fijn.
 
