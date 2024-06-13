@@ -116,7 +116,12 @@ if (userInput in departments) {
   const taskThreeA = "Opdracht 3a";
   console.log(taskThreeA);
   userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${arr.length - 1}\n${allTitles}`);
+  const taskThreeC = "Opdracht 3c";
+  console.log(taskThreeC);
   if (parseInt(userInput) >= 0 || parseInt(userInput) <= arr.length) {
+    console.log("This is a valid entry");
+    const taskThreeB = "Opdracht 3b";
+    console.log(taskThreeB);
     console.log(`Je koos ${arr[userInput].title}. Een uitdagende rol! ${arr[userInput].description}`);
   } else {
     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
