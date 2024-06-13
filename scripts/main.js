@@ -96,6 +96,11 @@ console.log(`Sales is een uitdagende afdeling om te werken als ${salesManager}`)
 const taskTwoA = "Opdracht 2a";
 console.log(taskTwoA)
 let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+
+// This manipulation is needed to be able to get the object of customerService
+if (userInput == "customer-service") {
+  userInput = "customerService";
+}
 console.log(userInput);
 
 const taksTwoB = "Opdracht 2B";
