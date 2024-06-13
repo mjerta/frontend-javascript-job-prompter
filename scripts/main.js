@@ -139,8 +139,6 @@ if (userInput in departments) {
 
   // Opdracht 4 - samenvoegen
 
-  // Opdracht 4 - samenvoegen
-
   const taskFourA = "Opdracht 4a";
   console.log(taskFourA);
   console.log(userInput);
