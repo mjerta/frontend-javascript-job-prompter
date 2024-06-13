@@ -153,7 +153,7 @@ if (userInput in departments) {
   console.log(taskFourC);
 
   // This will check if an user entry is between the indexes available of the array.
-  if (parseInt(userInput) >= 0 || parseInt(userInput) <= arr.length) {
+  if (parseInt(userInput) >= 0 && parseInt(userInput) <= arr.length) {
     console.log("This is a valid entry");
     const taskFourB = "Opdracht 4b";
     console.log(taskFourB);
