@@ -107,33 +107,55 @@ console.log(taskTwoC);
 if (userInput in departments) {
   console.log("This is a valid entry");
   let allTitles = "";
-// Opdracht 3 - een nieuwe prompt
-  const arr = departments[userInput].jobs;
-  arr.forEach((element, index) => {
-    allTitles += `${index}: ${element.title} \n`;
-  });
 
   // Opdracht 3 - een nieuwe prompt
 
   // const taskThreeA = "Opdracht 3a";
-  // console.log(taskThreeA);
-  // userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${arr.length - 1}\n${allTitles}`);
+  // console.log(taskThreeA)
+  //
+  // const longString = `Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n` +
+  //     `0: ${departments[userInput].jobs[0].title},\n` +
+  //     `1: ${departments[userInput].jobs[1].title},\n` +
+  //     `2: ${departments[userInput].jobs[2].title},\n` +
+  //     `3: ${departments[userInput].jobs[3].title}`;
+  //
+  // userInput = prompt(longString);
+  //
   // const taskThreeC = "Opdracht 3c";
   // console.log(taskThreeC);
-  // if (parseInt(userInput) >= 0 || parseInt(userInput) <= arr.length) {
+  // if (parseInt(userInput) >= 0 || parseInt(userInput) <= 3) {
   //   console.log("This is a valid entry");
   //   const taskThreeB = "Opdracht 3b";
   //   console.log(taskThreeB);
-  //   console.log(`Je koos ${arr[userInput].title}. Een uitdagende rol! ${arr[userInput].description}`);
+  //   console.log(`Je koos ${departments.marketing.jobs[userInput].title}. Een uitdagende rol! ${departments.marketing.jobs[userInput].description}`);
   // } else {
   //   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
   // }
 
   // Opdracht 4 - samenvoegen
 
+  // Opdracht 4 - samenvoegen
+
   const taskFourA = "Opdracht 4a";
   console.log(taskFourA);
-  console.log(`${departments[userInput]} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} mederwerkers`);
+  console.log(userInput);
+  console.log(`${userInput} is een leuke afdeling om te werken. Er werken op dit moment ${departments[userInput].numberOfEmployees} mederwerkers`);
+
+  const arr = departments[userInput].jobs;
+  arr.forEach((element, index) => {
+    allTitles += `${index}: ${element.title} \n`;
+  });
+  userInput = prompt(`Je koos voor ${userInput}. Over welke functie wil je meer weten? Voer een getal tussen 0 en ${arr.length - 1}\n${allTitles}`);
+  const taskFourC = "Opdracht 4c";
+  console.log(taskFourC);
+  if (parseInt(userInput) >= 0 || parseInt(userInput) <= arr.length) {
+    console.log("This is a valid entry");
+    const taskFourB = "Opdracht 4b";
+    console.log(taskFourB);
+    console.log(`Je koos ${arr[userInput].title}. Een uitdagende rol! ${arr[userInput].description}`);
+  } else {
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+  }
 } else {
   console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
